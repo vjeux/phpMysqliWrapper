@@ -1,4 +1,3 @@
-
 [phpMysqliWrapper](http://blog.vjeux.com/2009/php/mysqli-wrapper-short-and-secure-queries.html) - Short and Secure queries
 ================================
 
@@ -20,7 +19,7 @@ The class is extremely simple. The constructor connects to the database, the fun
 	class mysqliWrapper() {
 		public __constructor($host, $username, $password, $database, $debug);
 		public function q($query, $types, [$param ...]);
-                public function handle();
+		public function handle();
 	}
 
 ### Example
