@@ -1,6 +1,43 @@
 <?php
 
-Class dbWrapper {
+/*
+	phpMysqliWrapper by vjeux, August 2009
+	<vjeuxx@gmail.com> http://blog.vjeux.com/2009/php/mysqli-wrapper-short-and-secure-queries.html
+
+	Write short and secure queries with mysqli
+*/
+
+/*
+	// Example
+	
+	// Connect to the database:
+	// The last parameter is the debug mode.
+	
+	$db = new dbWrapper('host', 'user', 'pass', 'database', true);
+
+	// Do the query:
+	// It fits into a single line now
+	// mysqli replaces '?' safely with your parameters, sql injections are no longer possible
+
+	$result = $db->q(
+		"SELECT name, country_code FROM city WHERE zip = ? AND population > ?",
+		'si',        // Types of the parameters: s for string, i for integer
+		$zip, $pop); // Parameters
+
+	// Use the results:
+	// The results are returned in an array! This makes it a lot easier to process
+
+	foreach ($result as $key => $city) {
+	  // $city['Name'], $city['CountryCode']
+	}
+
+	// Additional notes:
+	// It returns false when an error happens
+	// It returns the number of affected rows for UPDATE and INSERT queries
+	// Use $mysqli = $db->handle() to get the mysqli object
+*/
+
+Class mysqliWrapper {
     protected $_mysqli;
     protected $_debug;
  
