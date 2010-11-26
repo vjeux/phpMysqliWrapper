@@ -13,7 +13,7 @@
 	// Connect to the database:
 	// The last parameter is the debug mode.
 	
-	$db = new dbWrapper('host', 'user', 'pass', 'database', true);
+	$db = new mysqliWrapper('host', 'user', 'pass', 'database', true);
 
 	// Do the query:
 	// It fits into a single line now
